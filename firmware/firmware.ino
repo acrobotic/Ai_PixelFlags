@@ -42,7 +42,7 @@ void setup() {
   Serial.begin(9600);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
-  strip.setBrightness(100);
+  strip.setBrightness(50);
 }
 
 void loop() {
@@ -51,13 +51,7 @@ void loop() {
 
 // Slightly different, this makes the rainbow equally distributed throughout
 void flagCycle(uint8_t f, uint8_t wait) {
-  uint16_t i, j;
-  //  for(j=0; j<strip.numPixels(); j++) { // 5 cycles of all colors on wheel    
-  //    strip.setPixelColor(i, getFlagColor(f, j));
-  //    strip.show();
-  //    delay(wait);
-  //  }
-  //
+  uint16_t j;
   for(j=0; j<strip.numPixels(); j++) {
     strip.setPixelColor(j, getFlagColor(f, j));
   }
