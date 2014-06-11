@@ -42,7 +42,7 @@ void setup() {
   Serial.begin(9600);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
-  strip.setBrightness(50);
+  strip.setBrightness(100);
 }
 
 void loop() {
